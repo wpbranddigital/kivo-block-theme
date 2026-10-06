@@ -1,0 +1,146 @@
+/*
+ * Kivo supplemental styles.
+ *
+ * Small, targeted rules that theme.json's Global Styles system cannot
+ * express on its own (skip link, focus states, block style variations,
+ * a few utility classes used by the bundled patterns). Kept intentionally
+ * short — most visual design lives in theme.json.
+ */
+
+/*
+ * Screen reader text & Skip link accessibility styles.
+ *
+ * Hidden visually by default, fully visible and styled on keyboard focus.
+ * Complies with WordPress Theme Review accessibility guidelines (WCAG 2.4.1 & 2.4.7).
+ */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	word-break: normal !important;
+}
+
+.screen-reader-text:focus,
+.skip-link:focus,
+.skip-link.screen-reader-text:focus {
+	background-color: var(--wp--preset--color--primary, #4f46e5) !important;
+	border-radius: 0 0 0.5rem 0 !important;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+	clip: auto !important;
+	clip-path: none !important;
+	color: var(--wp--preset--color--white, #ffffff) !important;
+	display: block !important;
+	font-size: 0.9rem !important;
+	font-weight: 700 !important;
+	height: auto !important;
+	left: 6px !important;
+	line-height: normal !important;
+	margin: 0 !important;
+	outline: 2px solid var(--wp--preset--color--primary, #4f46e5) !important;
+	outline-offset: 2px !important;
+	overflow: visible !important;
+	padding: 0.75rem 1.25rem !important;
+	position: fixed !important;
+	text-decoration: none !important;
+	top: 6px !important;
+	width: auto !important;
+	z-index: 100000 !important;
+}
+
+/* Visible, high-contrast focus outline for keyboard users. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.wp-block-button__link:focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 2px;
+}
+
+/* "Card" style for core/group — a bordered, rounded surface. */
+.is-style-card {
+	background-color: var(--wp--preset--color--white);
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: 1rem;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.is-style-card:hover {
+	border-color: var(--wp--preset--color--primary);
+	box-shadow: 0 8px 24px rgba(22, 24, 29, 0.06);
+}
+
+/* "Pill" style for core/group — a small rounded badge container. */
+.is-style-pill {
+	background-color: var(--wp--preset--color--surface);
+	border-radius: 999px;
+	display: inline-flex;
+	padding: 0.35rem 1rem;
+}
+
+/* Small eyebrow badge used above hero headlines. */
+.kivo-badge {
+	background-color: var(--wp--preset--color--surface);
+	border-radius: 999px;
+	color: var(--wp--preset--color--primary);
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	padding: 0.4rem 1rem;
+}
+
+/* "FAQ" style for core/details — an accordion with a rotating indicator. */
+.is-style-faq summary {
+	cursor: pointer;
+	font-weight: 600;
+	list-style: none;
+	position: relative;
+}
+
+.is-style-faq summary::-webkit-details-marker {
+	display: none;
+}
+
+.is-style-faq summary::after {
+	content: "+";
+	color: var(--wp--preset--color--primary);
+	font-size: 1.25rem;
+	position: absolute;
+	right: 0;
+	top: -0.15rem;
+	transition: transform 0.2s ease;
+}
+
+.is-style-faq[open] summary::after {
+	transform: rotate(45deg);
+}
+
+/* Star-rating text used in testimonial patterns. */
+.kivo-stars {
+	color: var(--wp--preset--color--accent);
+}
+
+/* Circular avatar placeholder used in team/profile patterns. */
+.kivo-avatar img {
+	border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}

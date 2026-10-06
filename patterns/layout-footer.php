@@ -1,0 +1,33 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+/**
+ * Title: Layout: Alternate Footer (Simple)
+ * Slug: kivo/layout-footer
+ * Categories: kivo, footer
+ * Keywords: footer, alternate, simple, minimal
+ * Viewport Width: 1400
+ * Description: An alternate, single-row minimal footer you can paste into the Footer template part in place of the default multi-column layout.
+ * Inserter: true
+ *
+ * @package Kivo
+ */
+
+?>
+<!-- wp:group {"tagName":"footer","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|large","bottom":"var:preset|spacing|large","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}},"border":{"top":{"color":"var:preset|color|border","width":"1px"}}},"layout":{"type":"constrained"}} -->
+<footer class="wp-block-group alignfull" style="border-top-color:var(--wp--preset--color--border);border-top-width:1px;padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--large);padding-left:var(--wp--preset--spacing--small)">
+	<!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+	<div class="wp-block-group alignwide">
+
+		<!-- wp:site-title {"level":0,"style":{"typography":{"fontSize":"1.1rem"}}} /-->
+
+		<!-- wp:paragraph {"textColor":"muted","fontSize":"small"} -->
+		<p class="has-muted-color has-text-color has-small-font-size"><?php echo esc_html__( '© 2026 Kivo. All rights reserved.', 'kivo' ); ?></p>
+		<!-- /wp:paragraph -->
+
+	</div>
+	<!-- /wp:group -->
+</footer>
+<!-- /wp:group -->

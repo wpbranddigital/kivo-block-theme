@@ -1,0 +1,69 @@
+/*
+Theme Name: Kivo
+Author: wpbranddigital25
+Author URI: https://www.wpbranddigital.org/
+Description: Kivo is a lightweight, conversion-ready full site editing (FSE) block theme for freelancers, agencies, course creators, digital product sellers and small businesses. Build a professional homepage with native WordPress patterns and Site Editor Styles — no page builder plugin required.
+Version: 1.0.1
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kivo
+Tags: blog, entertainment, one-column, two-columns, grid-layout, custom-colors, custom-menu, editor-style, featured-images, full-site-editing, block-patterns, style-variations, rtl-language-support, translation-ready, wide-blocks, block-styles
+
+Kivo WordPress Theme, Copyright (C) 2026 wpbranddigital25
+Kivo is distributed under the terms of the GNU GPL v2 (or later).
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Kivo bundles the Plus Jakarta Sans Variable font, Copyright 2020 The Plus Jakarta Sans Project
+Authors (https://github.com/tokotype/PlusJakartaSans), licensed under the SIL Open Font License,
+1.1. See assets/fonts/jakarta-OFL-1.1.txt for the full license text.
+*/
+
+/*
+ * Accessibility styles required by WordPress Theme Review Guidelines.
+ * Refer: https://make.wordpress.org/themes/handbook/review/required/#skip-links
+ */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	word-break: normal !important;
+}
+
+.screen-reader-text:focus,
+.skip-link:focus,
+.skip-link.screen-reader-text:focus {
+	background-color: var(--wp--preset--color--primary, #4f46e5) !important;
+	border-radius: 0 0 0.5rem 0 !important;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
+	clip: auto !important;
+	clip-path: none !important;
+	color: var(--wp--preset--color--white, #ffffff) !important;
+	display: block !important;
+	font-size: 0.9rem !important;
+	font-weight: 700 !important;
+	height: auto !important;
+	left: 6px !important;
+	line-height: normal !important;
+	margin: 0 !important;
+	outline: 2px solid var(--wp--preset--color--primary, #4f46e5) !important;
+	outline-offset: 2px !important;
+	overflow: visible !important;
+	padding: 0.75rem 1.25rem !important;
+	position: fixed !important;
+	text-decoration: none !important;
+	top: 6px !important;
+	width: auto !important;
+	z-index: 100000 !important;
+}

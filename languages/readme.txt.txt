@@ -1,0 +1,1 @@
+# Languages directory for Kivo theme translations

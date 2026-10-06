@@ -1,0 +1,8 @@
+/*
+ * Editor-only styles so the block editor canvas matches the front end.
+ */
+@import url('custom.css');
+
+.editor-styles-wrapper {
+	font-family: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
